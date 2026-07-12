@@ -15,8 +15,8 @@ export default function About() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left — narrative + highlights */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 24 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-5"
@@ -64,8 +64,8 @@ export default function About() {
 
           {/* Right — pull-quote style message card */}
           <motion.aside
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 24 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-5 lg:sticky lg:top-28"

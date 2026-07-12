@@ -2,7 +2,7 @@
 
 export const faq = {
   eyebrow: 'FAQ',
-  heading: '',
+  heading: 'Frequently Asked Questions',
   items: [
     {
       q: 'Do you offer Trading or Investing courses?',
