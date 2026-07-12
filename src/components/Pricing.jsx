@@ -1,14 +1,27 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, TrendingDown } from 'lucide-react';
 import SectionHeader from './ui/SectionHeader';
+import BookingModal from './BookingModal';
 import { pricing } from '../content/pricing';
 import StockBackdrop from './decor/StockBackdrop';
 
-export default function Pricing({ onOpenContact }) {
+export default function Pricing() {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  function handleSelect(plan) {
+    setSelectedPlan(plan);
+    setModalOpen(true);
+  }
+
+  function handleClose() {
+    setModalOpen(false);
+  }
+
   return (
     <section id="pricing" className="section relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-gold-500/[0.04] to-transparent" />
-      {/* Subtle trading-chart grid backdrop */}
       <StockBackdrop variant="grid" className="absolute inset-0 -z-10 opacity-60" />
 
       <div className="section-inner relative">
@@ -20,17 +33,32 @@ export default function Pricing({ onOpenContact }) {
 
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {pricing.plans.map((plan, idx) => (
-            <PlanCard key={plan.name} plan={plan} idx={idx} onAction={onOpenContact} />
+            <PlanCard
+              key={plan.id}
+              plan={plan}
+              idx={idx}
+              selected={selectedPlan?.id === plan.id}
+              onSelect={() => handleSelect(plan)}
+            />
           ))}
         </div>
 
-        
+        <p className="mt-12 text-center text-sm md:text-base text-ink-muted max-w-xl mx-auto">
+          {pricing.bookingSubtitle}
+        </p>
       </div>
+
+      <BookingModal
+        open={modalOpen}
+        plan={selectedPlan}
+        onClose={handleClose}
+        onPlanChange={setSelectedPlan}
+      />
     </section>
   );
 }
 
-function PlanCard({ plan, idx, onAction }) {
+function PlanCard({ plan, idx, selected, onSelect }) {
   const highlighted = plan.highlighted;
   const hasFeatures = plan.features && plan.features.length > 0;
 
@@ -40,10 +68,16 @@ function PlanCard({ plan, idx, onAction }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className={`relative flex flex-col rounded-2xl p-7 md:p-8 ${
+      className={`relative flex flex-col rounded-2xl p-7 md:p-8 transition-shadow ${
         highlighted
           ? 'bg-gold-gradient text-bg shadow-gold scale-[1.02] md:-mt-2 md:mb-2'
-          : 'bg-card-gradient border border-white/5 text-ink shadow-card'
+          : 'bg-card-gradient border text-ink shadow-card'
+      } ${
+        selected
+          ? 'ring-2 ring-gold-400 ring-offset-2 ring-offset-bg'
+          : highlighted
+            ? ''
+            : 'border-white/5'
       }`}
     >
       {plan.badge && (
@@ -61,12 +95,13 @@ function PlanCard({ plan, idx, onAction }) {
         </p>
       </div>
 
-      {/* Price block */}
       <div className="mt-6">
         <div className="flex items-baseline gap-2 flex-wrap">
-          <span className={`text-4xl md:text-5xl font-display font-extrabold leading-none ${
-            highlighted ? 'text-bg' : 'text-ink'
-          }`}>
+          <span
+            className={`text-4xl md:text-5xl font-display font-extrabold leading-none ${
+              highlighted ? 'text-bg' : 'text-ink'
+            }`}
+          >
             {plan.price}
           </span>
           <span className={`text-sm font-medium ${highlighted ? 'text-bg/70' : 'text-ink-muted'}`}>
@@ -112,18 +147,23 @@ function PlanCard({ plan, idx, onAction }) {
         </ul>
       )}
 
-      {/* push CTA to the bottom of the card */}
       <div className="flex-1" />
 
       <button
-        onClick={onAction}
+        type="button"
+        onClick={onSelect}
+        aria-pressed={selected}
         className={`mt-8 w-full rounded-full py-3 text-sm font-semibold transition-all ${
-          highlighted
-            ? 'bg-bg text-gold-400 hover:bg-bg-elev'
-            : 'bg-gold-gradient text-bg hover:brightness-110 shadow-gold-sm'
+          selected
+            ? highlighted
+              ? 'bg-bg text-gold-400 ring-2 ring-bg/30'
+              : 'bg-gold-500/20 text-gold-300 border border-gold-500/50'
+            : highlighted
+              ? 'bg-bg text-gold-400 hover:bg-bg-elev'
+              : 'bg-gold-gradient text-bg hover:brightness-110 shadow-gold-sm'
         }`}
       >
-        {plan.cta}
+        {selected ? 'Selected' : 'Select'}
       </button>
     </motion.div>
   );
