@@ -111,7 +111,7 @@ export default function Hero() {
       <a
         href="#services"
         aria-label="Scroll to next section"
-        className="hidden md:flex absolute left-1/2 -translate-x-1/2 bottom-6 flex-col items-center gap-1 text-ink-dim hover:text-gold-400 transition-colors"
+        className="hidden md:flex absolute left-1/2 -translate-x-1/2 bottom-6 flex-col items-center gap-1 text-ink-muted hover:text-gold-400 transition-colors"
       >
         <span className="text-[10px] uppercase tracking-widest">Scroll</span>
         <ChevronDown size={18} className="animate-bounce" />
