@@ -24,7 +24,7 @@ export default function App() {
       <main>
         <Hero />
         <Services onOpenContact={openContact} />
-        <Pricing onOpenContact={openContact} />
+        <Pricing />
         <About />
         <FAQ />
         <Compliance />
