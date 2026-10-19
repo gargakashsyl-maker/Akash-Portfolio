@@ -78,15 +78,14 @@ export const pricing = {
       name: 'Free WhatsApp Group',
       type: 'free',
      // description: 'Get delayed market insights and updates. Perfect for exploring my community before upgrading. No live trades and Q&A sessions.',
-      {
-  description: 'Perfect for exploring our community before upgrading.',
+    description: 'Perfect for exploring our community before upgrading.',
   features: [
     'Delayed market insights and updates',
     'Ideal for trial experience',
     'No live trades',
     'No Q&A sessions',
   ],
-}
+
       features: [],
       highlighted: false,
       ctaLabel: 'Join Free Group',
