@@ -6,7 +6,7 @@ export const footer = {
   quickLinks: [
     { label: 'Home', href: '#home' },
     { label: 'Services', href: '#services' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Community', href: '#pricing' },
     { label: 'About', href: '#about' },
     { label: 'FAQ', href: '#faq' },
     { label: 'Compliance', href: '#compliance' },
