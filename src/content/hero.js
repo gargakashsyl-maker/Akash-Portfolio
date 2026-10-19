@@ -4,7 +4,7 @@ export const hero = {
   eyebrow: 'SEBI Registered • INH000027450',
   greeting: '',
   name: 'Research gives you Confidence',
-  title: 'Get the best Market Research and Equity calls and avail many other complimentary benefits ',
+  title: 'Get high-probability winning trades, expert investment advice, and enjoy a wide range of complimentary benefits\! ',
   description:
     "Hi, I am Akash Garg, SEBI Registered Research Analyst (INH000027450)",
   ctaPrimary: { label: 'About Me', href: '#about' },
