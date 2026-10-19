@@ -78,7 +78,7 @@ export const pricing = {
       name: 'Free WhatsApp Group',
       type: 'free',
      // description: 'Get delayed market insights and updates. Perfect for exploring my community before upgrading. No live trades and Q&A sessions.',
-    description: 'Perfect for exploring our community before upgrading.',
+   // description: 'Perfect for exploring our community before upgrading.',
   features: [
     'Delayed market insights and updates',
     'Ideal for trial experience',
@@ -95,8 +95,14 @@ export const pricing = {
       id: 'premium',
       name: 'Paid Premium Group',
       type: 'paid',
-      description: 'Get timely trade updates, real-time market insights, premium guidance, and interactive Q&A sessions—all in one exclusive community.',
-      features: [],
+     // description: 'Get timely trade updates, real-time market insights, premium guidance, and interactive Q&A sessions—all in one exclusive community.',
+      features: [
+        'Get timely trade updates',
+        'Real-time market insights',
+        'Interactive Q&A sessions',
+        'Free Education',
+        
+      ],
       highlighted: true,
       ctaLabel: 'Join Premium Group',
       href: 'https://ra.stopyourlosswithakash.com/sub/79210a',
