@@ -489,7 +489,7 @@ export const compliance = {
   // -----------------------------------------------------------------------
   complaintsTable: {
     title: "Number of Client's Complaints",
-    period: 'Data of the Month Ending — July 2026',
+    period: 'Data of the Month Ending — October 2026',
     columns: [
       'Received From',
       'Pending at end of last month',
