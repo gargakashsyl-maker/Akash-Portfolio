@@ -12,20 +12,20 @@
 
 export const pricing = {
   eyebrow: 'Subscription Plans',
-  heading: 'Choose the plan that fits your style',
-  subheading:
-    'Annual fee per family is capped at ₹1,51,000 as per SEBI guidelines.',
-  bookingSubtitle: 'Select your preferred subscription and continue securely.',
-  booking: {
-    title: 'Booking Details',
-    namePlaceholder: 'Full Name',
-    infoNote:
-      'Investments in securities market are subject to market risks. Read all related documents carefully before investing.',
-    subscriptionPriceLabel: 'Subscription Price',
-    quantityLabel: 'Plans',
-    totalLabel: 'Total Amount',
-    payPrefix: 'Pay',
-    cancelLabel: 'Cancel',
+  heading: 'Choose the group that fits your style',
+ // subheading:
+ //   'Annual fee per family is capped at ₹1,51,000 as per SEBI guidelines.',
+ // bookingSubtitle: 'Select your preferred subscription and continue securely.',
+ // booking: {
+   // title: 'Booking Details',
+   // namePlaceholder: 'Full Name',
+   // infoNote:
+     // 'Investments in securities market are subject to market risks. Read all related documents carefully before investing.',
+   // subscriptionPriceLabel: 'Subscription Price',
+   // quantityLabel: 'Plans',
+   // totalLabel: 'Total Amount',
+   // payPrefix: 'Pay',
+   // cancelLabel: 'Cancel',
   },
   plans: [
     {
