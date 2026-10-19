@@ -85,7 +85,7 @@ export const pricing = {
       features: [],
       highlighted: false,
       ctaLabel: 'Join Free Group',
-      href: 'https://chat.whatsapp.com/YOUR_GROUP_INVITE_CODE',
+      href: 'https://chat.whatsapp.com/LqALmGw375ZB52aFzZxdc8?s=cl&p=a&mlu=4&ilr=4',
     },
     {
       id: 'premium',
@@ -100,7 +100,7 @@ export const pricing = {
       highlighted: true,
       badge: 'Recommended',
       ctaLabel: 'Join Premium Group',
-      href: 'https://your-paid-link.com',
+      href: 'https://ra.stopyourlosswithakash.com/sub/79210a',
     },
   ],
 };
