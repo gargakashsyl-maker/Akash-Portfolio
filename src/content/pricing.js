@@ -12,10 +12,10 @@
 
 export const pricing = {
   eyebrow: 'Subscription Plans',
-  heading: 'Choose the plan that fits your style',
-  subheading:
-    'Annual fee per family is capped at ₹1,51,000 as per SEBI guidelines.',
-  bookingSubtitle: 'Select your preferred subscription and continue securely.',
+  heading: 'Choose the group that fits your style',
+  //subheading:
+    //'Annual fee per family is capped at ₹1,51,000 as per SEBI guidelines.',
+  //bookingSubtitle: 'Select your preferred subscription and continue securely.',
   booking: {
     title: 'Booking Details',
     namePlaceholder: 'Full Name',
