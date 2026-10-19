@@ -75,13 +75,9 @@ export const pricing = {
   plans: [
     {
       id: 'free',
-      name: 'Free Group',
+      name: 'Free WhatsApp Group',
       type: 'free',
-      durationLabel: 'Free Forever',
-      price: 'Free',
-      amount: 0,
-      cadence: '',
-      description: 'Join our WhatsApp group and get free market updates.',
+      description: 'Get delayed market insights and updates. Perfect for exploring my community before upgrading. No live trades and Q&A sessions.',
       features: [],
       highlighted: false,
       ctaLabel: 'Join Free Group',
@@ -91,14 +87,9 @@ export const pricing = {
       id: 'premium',
       name: 'Paid Premium Group',
       type: 'paid',
-      durationLabel: 'Premium Access',
-      price: '₹X,XXX', // अपनी कीमत यहाँ डालें
-      amount: 0,        // अपनी कीमत (number) यहाँ डालें
-      cadence: '/month',
-      description: 'Get premium research and sustained guidance.',
+      description: 'Get timely trade updates, real-time market insights, premium guidance, and interactive Q&A sessions—all in one exclusive community.',
       features: [],
       highlighted: true,
-      badge: 'Recommended',
       ctaLabel: 'Join Premium Group',
       href: 'https://ra.stopyourlosswithakash.com/sub/79210a',
     },
