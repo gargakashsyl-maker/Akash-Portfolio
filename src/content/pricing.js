@@ -86,7 +86,7 @@ export const pricing = {
     'No Q&A sessions',
   ],
 
-      features: [],
+     // features: [],
       highlighted: false,
       ctaLabel: 'Join Free Group',
       href: 'https://chat.whatsapp.com/LqALmGw375ZB52aFzZxdc8?s=cl&p=a&mlu=4&ilr=4',
